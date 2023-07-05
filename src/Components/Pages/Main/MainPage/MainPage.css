@@ -1,0 +1,91 @@
+
+
+
+.mainPage{
+    width: 100vw;
+    min-height: 100vh;
+    margin-top: -3.4rem;
+    margin-left: -2.5rem;
+    top: 0;
+    left: 0;
+}
+.carousel-main{
+    width: 100vw;
+}
+
+.carousel-title-main{
+    width:30rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.2rem;
+    font-weight:bold
+}
+
+.carousel-description-main{
+    width:30rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.8rem;
+    font-weight:bold;
+ 
+}
+
+
+@media only screen and (max-width:1200px){
+    .carousel-title-main{
+        width:25rem;
+        font-size:1rem;
+    }
+    .carousel-description-main{
+        width:25rem;
+text-align: center;
+        font-size:0.8rem;
+    }
+}
+@media only screen and (max-width:900px){
+    .carousel-title-main{
+        width:20rem;
+        font-size:0.9rem;
+    }
+    .carousel-description-main{
+        width:18rem;
+        font-size:0.6rem;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:710px){
+    .carousel-title-main{
+        width:17rem;
+        font-size:0.7rem;
+    }
+    .carousel-description-main{
+        width:17rem;
+        font-size:0.55rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .carousel-title-main{
+        width:14rem;
+        font-size:0.6rem;
+    }
+    .carousel-description-main{
+        width:14rem;
+        font-size:0.45rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .carousel-title-main{
+        width:11rem;
+        font-size:0.7rem;
+    }
+    .carousel-description-main{
+        width:11rem;
+        font-size:0.6rem;
+        text-align: center;
+    }
+    .carousel-main{
+        width: 105vw;
+    }
+}

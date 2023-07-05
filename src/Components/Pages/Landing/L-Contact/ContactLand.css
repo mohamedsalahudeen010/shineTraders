@@ -1,0 +1,485 @@
+
+.contact{
+    background-image: url("../LandingPage/CorouselImagesLand/c1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    width: 100vw;
+    margin-top: -2rem;
+    margin-left: -2rem;
+    text-align: center;   
+    padding-top: 10rem;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+}
+.contact>span:nth-of-type(1){
+    font-size:2rem;
+    font-weight: bold;
+    color: rgb(24, 19, 107);
+    display: block;
+}
+
+.contact>span:nth-of-type(2){
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(22, 27, 22);
+    display: inline-block;
+}
+.form{
+    position: relative;
+    
+    width: 50%;
+    margin-left: 40%;
+    
+    height: 60vh;
+}
+
+.contact-name{
+    margin-top: 1rem;
+    width: 50%;
+    height: 3rem;
+    border: solid rgb(230, 122, 21);
+    border-width: 0 0 1px 1px;
+    border-radius: 0 0.5rem 0 0;
+    color: black;
+    padding: 0.5rem;
+    background-color: rgb(255, 255, 255);
+}
+
+.contact-email{
+    margin-top: 1rem;
+    width: 50%;
+    height: 3rem;
+    border: 5px solid;
+    padding: 0.8rem;
+    border: solid rgb(230, 122, 21);
+    border-width: 0 0 1px 1px;
+    border-radius: 0 0.5rem 0 0;
+    background-color: rgb(255, 255, 255);
+    
+}
+.contact-phoneNumber{
+    margin-top: 1rem;
+    width: 50%;
+    height: 3rem;
+    border: 5px solid;
+    padding: 0.8rem;
+    border: solid rgb(230, 122, 21);
+    border-width: 0 0 1px 1px;
+    border-radius: 0 0.5rem 0 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.contact-textbox{
+    margin-top: 1rem;
+    width: 50%;
+    height: 4rem !important;
+    padding: 0.8rem;
+    border: solid rgb(230, 122, 21);
+    border-width: 0 0 1px 1px;
+    border-radius: 0 0.5rem 0 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.contact-btn{
+    width: 8rem;
+    height: 3rem;
+   margin-top: 1rem;
+   color: black;
+   background-color: rgb(200, 13, 13);
+   font-size: 1.2rem;
+}
+.contact-btn:hover{
+    width: 8.2rem;
+    height: 3.2rem;
+   margin-top: 1rem;
+   color: rgb(255, 255, 255);
+   background-color: rgb(53, 48, 206);
+   font-size: 1.3rem;
+}
+.contact-alert-main{
+    margin-top: 1rem;
+}
+
+.contact-alert{
+    color: rgb(228, 77, 22);
+    padding: 0.2rem 1rem;
+    width: 100%;
+    
+}
+
+.contact-success{
+    color: rgb(9, 86, 14);
+    padding: 0.2rem 1rem;
+    
+}
+
+
+
+@media only screen and (max-width:1200px){
+    .contact{
+     
+        padding-top: 9rem;
+    }
+ 
+    .contact>span:nth-of-type(1){
+        font-size:2rem;
+        margin-left: 10rem;
+    }
+    
+    .contact>span:nth-of-type(2){
+        font-size: 1.2rem;
+       margin-left: 10rem;
+       
+    }
+    .form{
+        position: relative;  
+        width: 50%;
+        margin-left: 45%;   
+        height: 60vh;
+    }
+    
+    .contact-name{
+        margin-top: 1rem;
+        width: 70%;
+        height: 3rem;
+        padding: 0.5rem;
+       
+    }
+    
+    .contact-email{
+        margin-top: 1rem;
+        width: 70%;
+        height: 3rem;
+     
+        padding: 0.8rem;
+      
+        
+    }
+    .contact-phoneNumber{
+        margin-top: 1rem;
+        width: 70%;
+        height: 3rem;
+       
+        padding: 0.8rem;
+     
+    }
+    
+    .contact-textbox{
+        margin-top: 1rem;
+        width: 70%;
+        min-height: 4rem !important;
+        padding: 0.8rem;
+    
+    }
+    
+    .contact-btn{
+        width: 8rem;
+        height: 3rem;
+       margin-top: 1rem;
+  
+       font-size: 1.2rem;
+    }
+    .contact-btn:hover{
+        width: 8.2rem;
+        height: 3.2rem;
+       margin-top: 1rem;
+      
+       font-size: 1.3rem;
+    }
+    .contact-alert-main{
+        margin-top: 1rem;
+    }
+    
+    .contact-alert{
+       
+        padding: 0.2rem 1rem;
+        width: 100%;
+        
+    }
+    
+    .contact-success{
+       
+        padding: 0.2rem 1rem;
+        
+    }
+}
+
+
+
+@media only screen and (max-width:800px){
+    .contact{
+     
+        padding-top: 9rem;
+    }
+ 
+    .contact>span:nth-of-type(1){
+        font-size:2rem;
+        margin-left: 8rem;
+    }
+    
+    .contact>span:nth-of-type(2){
+        font-size: 1rem;
+       margin-left: 8rem;
+       
+    }
+    .form{
+        position: relative;  
+        width: 50%;
+        margin-left: 45%;   
+        height: 60vh;
+    }
+    
+    .contact-name{
+        margin-top: 1rem;
+        width: 80%;
+        height: 3rem;
+        padding: 0.5rem;
+       
+    }
+    
+    .contact-email{
+        margin-top: 1rem;
+        width: 80%;
+        height: 3rem;
+     
+        padding: 0.8rem;
+      
+        
+    }
+    .contact-phoneNumber{
+        margin-top: 1rem;
+        width: 80%;
+        height: 3rem;
+       
+        padding: 0.8rem;
+     
+    }
+    
+    .contact-textbox{
+        margin-top: 1rem;
+        width: 80%;
+        min-height: 4rem !important;
+        padding: 0.8rem;
+    
+    }
+    
+    .contact-btn{
+        width: 8rem;
+        height: 3rem;
+       margin-top: 1rem;
+  
+       font-size: 1.2rem;
+    }
+    .contact-btn:hover{
+        width: 8.2rem;
+        height: 3.2rem;
+       margin-top: 1rem;
+      
+       font-size: 1.3rem;
+    }
+    .contact-alert-main{
+        margin-top: 1rem;
+    }
+    
+    .contact-alert{
+       
+        padding: 0.2rem 1rem;
+        width: 100%;
+        
+    }
+    
+    .contact-success{
+       
+        padding: 0.2rem 1rem;
+        
+    }
+}
+
+
+
+
+
+@media only screen and (max-width:650px){
+    .contact{
+     
+        padding-top: 9rem;
+    }
+ 
+    .contact>span:nth-of-type(1){
+        font-size:1.8rem;
+        margin-left: 8rem;
+    }
+    
+    .contact>span:nth-of-type(2){
+        font-size: 0.8rem;
+       margin-left: 7rem;
+       
+    }
+    .form{
+        position: relative;  
+        width: 50%;
+        margin-left: 45%;   
+        height: 60vh;
+    }
+    
+    .contact-name{
+        margin-top: 1rem;
+        width: 90%;
+        height: 3rem;
+        padding: 0.5rem;
+       
+    }
+    
+    .contact-email{
+        margin-top: 1rem;
+        width: 90%;
+        height: 3rem;
+     
+        padding: 0.8rem;
+      
+        
+    }
+    .contact-phoneNumber{
+        margin-top: 1rem;
+        width: 90%;
+        height: 3rem;
+       
+        padding: 0.8rem;
+     
+    }
+    
+    .contact-textbox{
+        margin-top: 1rem;
+        width: 90%;
+        min-height: 4rem !important;
+        padding: 0.8rem;
+    
+    }
+    
+    .contact-btn{
+        width: 8rem;
+        height: 3rem;
+       margin-top: 1rem;
+  
+       font-size: 1.2rem;
+    }
+    .contact-btn:hover{
+        width: 8.2rem;
+        height: 3.2rem;
+       margin-top: 1rem;
+      
+       font-size: 1.3rem;
+    }
+    .contact-alert-main{
+        margin-top: 1rem;
+    }
+    
+    .contact-alert{
+       
+        padding: 0.2rem 1rem;
+        width: 100%;
+        
+    }
+    
+    .contact-success{
+       
+        padding: 0.2rem 1rem;
+        
+    }
+}
+
+
+
+
+@media only screen and (max-width:450px){
+    .contact{
+     
+        padding-top: 13rem;
+    }
+ 
+    .contact>span:nth-of-type(1){
+        font-size:1.8rem;
+        margin-left: 8rem;
+    }
+    
+    .contact>span:nth-of-type(2){
+        font-size: 0.8rem;
+       margin-left: 7rem;
+       
+    }
+    .form{
+        position: relative;  
+        width: 50%;
+        margin-left: 45%;   
+        height: 60vh;
+    }
+    
+    .contact-name{
+        margin-top: 1rem;
+        width: 100%;
+        height: 3rem;
+        padding: 0.5rem;
+       
+    }
+    
+    .contact-email{
+        margin-top: 1rem;
+        width: 100%;
+        height: 3rem;
+     
+        padding: 0.8rem;
+      
+        
+    }
+    .contact-phoneNumber{
+        margin-top: 1rem;
+        width:100%;
+        height: 3rem;
+       
+        padding: 0.8rem;
+     
+    }
+    
+    .contact-textbox{
+        margin-top: 1rem;
+        width: 100%;
+        min-height: 4rem !important;
+        padding: 0.8rem;
+    
+    }
+    
+    .contact-btn{
+        width: 6rem;
+        height: 2.5rem;
+       margin-top: 1rem;
+  
+       font-size: 1.2rem;
+    }
+    .contact-btn:hover{
+        width: 8.2rem;
+        height: 3.2rem;
+       margin-top: 1rem;
+      
+       font-size: 1.3rem;
+    }
+    .contact-alert-main{
+        margin-top: 1rem;
+    }
+    
+    .contact-alert{
+       
+        padding: 0.2rem 1rem;
+        width: 100%;
+        
+    }
+    
+    .contact-success{
+       
+        padding: 0.2rem 1rem;
+        
+    }
+}
