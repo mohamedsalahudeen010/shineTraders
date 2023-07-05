@@ -125,12 +125,13 @@ export const addOneToCart=(product,varient,quantity)=>{
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fetch Cart Items >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 
+
 export const fetchCart=(email)=>{
     return async (dispatch)=>{
         dispatch(fetchCartRequest())
         
         try {
-            const response=await fetch(`https://shine-traders-back-end.vercel.app/cart?${email}`,{
+            const response=await fetch(`https://shine-traders-back-end.vercel.app/cart?userMail=${email}`,{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json",
@@ -148,6 +149,7 @@ export const fetchCart=(email)=>{
         }
     }
 }
+
 
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Delete Items In Cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
