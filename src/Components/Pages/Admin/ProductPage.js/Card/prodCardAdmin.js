@@ -25,16 +25,16 @@ const ProductCardAdmin = ({ product }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className="row prod-card-main-main">
+    <div className="row prod-card-main-admin">
 
 
 
-      <Card className="prod-card-main p-1 ">
+      <Card className="prod-card-admin p-1 ">
         <Card.Title
-        className="prod-card-name-main">{product.name}</Card.Title>
+        className="prod-card-name-admin">{product.name}</Card.Title>
         <Card.Img
           variant="top"
-          className="card-image-main"
+          className="card-image-admin"
           src={product.image}
           onClick={handleShow}
           
@@ -42,12 +42,12 @@ const ProductCardAdmin = ({ product }) => {
         <Card.Body>
           {/* ======================================================*/}
           <div className="flex-container card-body">
-          <div className="w-100 m-1 prod-card-type2-main">
+          <div className="w-100 prod-card-type2-admin">
             {product.type2}
             </div>
           </div>
           <div className="flex-container">
-            <div className="w-100 prod-varient-main">
+            <div className="w-100 prod-varient-admin">
              <div style={{fontWeight:"bold"}}>Quantity</div> 
               {product.quantity}
             </div>
@@ -62,7 +62,7 @@ const ProductCardAdmin = ({ product }) => {
           <div className="flex-container">
             <div className="w-100">
               <h5
-              className="prod-price-main">
+              className="prod-price-admin">
                 Price :{" "}
                 { product.prize}{" "}
                 Rs/-
