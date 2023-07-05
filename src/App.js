@@ -37,7 +37,7 @@ function App() {
 
   useEffect(()=>{
    dispatch(fetchProducts()) 
-   dispatch(fetchCart())
+  dispatch(fetchCart(localStorage.getItem("email")))
   },[])
 
   const { openCom, setOpenCom, openLand, setOpenLand } =
