@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchProducts } from '../../../../Base/redux/Products/productssAction'
 import ProductCardAdmin from './Card/prodCardAdmin'
 
+
 function AdminProductPage() {
 
   const dispatch=useDispatch()
@@ -15,11 +16,12 @@ function AdminProductPage() {
   return (
     <AdminBase>
          
-      <div className="row justify-content-center products-main">
+      <div className="row justify-content-center products-admin"
+      style={{paddingTop:"8rem"}}>
         {product &&
           product.map((prod) => (
             <div
-              className="col-md-3 card-main"
+              className="col-md-3 m-1 card-admin"
               key={prod._id}
               
             >
