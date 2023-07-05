@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+.nav-wrapper-admin{
+    height:10vh;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(25, 51, 9);
+    position:fixed;
+    top: 8vh;
+    left: 0;
+    width: 96vw;
+    z-index:2;
+    background-color: rgba(252, 252, 252, 0.934);
+    border-radius: 0.5rem;
+    border: 0.5px solid grey;
+   
+}
+
+.nav-left-admin{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    cursor: pointer;
+}
+.nav-name-admin{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    cursor: pointer;
+    color: rgb(80, 181, 22);
+}
+
+.nav-right-admin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    gap: 1rem;
+    font-weight: 400;
+}
+.nav-list-admin{
+    flex: 20;
+    margin-left: 50%;
+    cursor: pointer;
+}
+
+.nav-list-admin>ul{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    font-weight: bold;
+    font-size:1.1rem;
+   margin-top: 1rem;
+}
+.nav-list-admin>ul>li:hover{
+cursor: pointer;
+color: rgb(185, 96, 41);
+font-size:1.2rem;
+}
+.products{
+    font-size: 0.8rem;
+    width: 98vw;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    border: 0.2px solid black;
+    border-radius:0 0 1rem 1rem;
+    transition: all 0.5s;
+    box-shadow: 1rem 1rem 1rem rgb(49, 49, 49);
+}
+.products>div{
+    text-align: left;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+   
+}
+.check-label-land-admin{
+    display: none;
+}
+.land-dot-list-admin{
+    position: absolute;
+    margin-top: 5rem;
+    margin-left: 28rem;
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .nav-name{
+        font-size: 1rem;
+        font-weight: bold;
+        padding-left: 0.5rem;
+        cursor: pointer;
+    }
+    
+.nav-list>ul{
+    display: flex;
+   margin-top: 1rem;
+    gap: 1rem;
+   
+    font-size:0.5rem;
+   
+}
+.nav-list{
+
+    margin-left: 40%;
+    cursor: pointer;
+}
+  }
+
+@media only screen and (max-width: 960px) {
+    .dropDown{
+        display: inline-block;
+        margin-top: 1rem;
+        margin-right: 2rem;
+    }
+    .nav-right{
+        display: none;
+    }
+  }
+  
+
+  
+@media only screen and (max-width: 600px) {
+    .dropDown{
+        margin-right: 1rem;
+    }
+    .nav-right{
+        display: none;
+    }
+    .nav-name{
+        font-size: 1rem;
+        font-weight: bold;
+        padding-left: 1rem;
+        cursor: pointer;
+    }
+    .check-label-land{
+        display: block;
+        margin-top: 1rem;
+        margin-left: -5rem;
+    }
+    .land-dot-list{
+    
+        display: block;
+    }
+  }
+  
