@@ -1,0 +1,90 @@
+
+.landingPage{
+    width: 100vw;
+    min-height: 100vh;
+    margin-top: -3.3rem;
+    margin-left: -2.5rem;
+    top: 0;
+    left: 0;
+}
+.carousel-land{
+    width: 100vw;
+    height: 120vh;
+}
+
+.carousel-title-land{
+    width:30rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.2rem;
+    font-weight:bold
+}
+
+.carousel-description-land{
+    width:30rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:0.8rem;
+    font-weight:bold;
+ 
+}
+
+
+@media only screen and (max-width:1200px){
+    .carousel-title-land{
+        width:25rem;
+        font-size:1rem;
+    }
+    .carousel-description-land{
+        width:25rem;
+text-align: center;
+        font-size:0.8rem;
+    }
+}
+@media only screen and (max-width:900px){
+    .carousel-title-land{
+        width:20rem;
+        font-size:0.9rem;
+    }
+    .carousel-description-land{
+        width:18rem;
+        font-size:0.6rem;
+        text-align: center;
+    }
+}
+@media only screen and (max-width:710px){
+    .carousel-title-land{
+        width:17rem;
+        font-size:0.7rem;
+    }
+    .carousel-description-land{
+        width:17rem;
+        font-size:0.55rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .carousel-title-land{
+        width:14rem;
+        font-size:0.6rem;
+    }
+    .carousel-description-land{
+        width:14rem;
+        font-size:0.45rem;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .carousel-title-land{
+        width:11rem;
+        font-size:0.7rem;
+    }
+    .carousel-description-land{
+        width:11rem;
+        font-size:0.6rem;
+        text-align: center;
+    }
+    .carousel-land{
+        width: 105vw;
+    }
+}

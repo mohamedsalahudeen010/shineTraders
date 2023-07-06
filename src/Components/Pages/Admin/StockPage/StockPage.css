@@ -1,0 +1,35 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.stock-page{
+    padding: 1rem;
+padding-top:8rem;
+
+}
+.stock-card-admin{
+ 
+
+}
+.stock-admin{
+   
+}
+.add-product-btn{
+width: 50vw;
+height: 6vh;
+border-radius: 0.5rem;
+background-color: rgb(58, 205, 50);
+color: white;
+font-size: 1rem;
+font-weight: bolder;
+}
+.add-product-btn:hover{
+    width: 50vw;
+    height: 6vh;
+    border-radius: 0.5rem;
+    background-color: rgb(14, 90, 10);
+    color: rgb(233, 225, 225);
+    font-weight: bold;
+    }
+

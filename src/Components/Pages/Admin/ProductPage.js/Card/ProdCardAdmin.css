@@ -1,0 +1,68 @@
+*{
+  margin: 0%;
+  padding: 0%;
+
+}
+
+.prod-card-main-admin{
+   
+   height: 40vh;
+   width:100%;
+ border-radius: 1rem;
+ box-shadow: 0.5rem 0.5rem 0.5rem rgb(134, 132, 132);
+ padding: 0.3rem;
+background-color: rgb(23, 79, 129);
+text-align: center;
+margin: 1rem;
+}
+.prod-card-admin {
+    width:100%;
+    height: 100%;
+    border: 0.2rem solid rgb(34, 34, 31);
+   background-color: whitesmoke;
+
+  
+  }
+  .card-body>*{
+  
+   padding: 0.3rem;
+  
+  
+  }
+  .card-image-admin{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  
+    padding: 0.5rem;
+    margin-top: -1rem;
+ 
+  }
+ 
+.prod-varient-admin{
+  margin-top: -0.2rem;
+}
+  .prod-admin-btn {
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
+    background-color: rgb(210, 50, 50);
+    color: whitesmoke;
+    font-size: 1rem;
+  }
+  .flex-container {
+    display: flex !important;
+    margin-top: -1rem;
+  }
+  .prod-card-name-admin{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .prod-card-type2-admin{
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -1rem;
+  }
+  .prod-price-admin{
+    font-size: 1rem;
+    font-weight: bold;
+  }
