@@ -31,13 +31,22 @@ import LocatePageAdmin from './Components/Pages/Admin/locatePage/LocatePageAdmin
 import GalleryLand from './Components/Pages/Landing/Gallery/GalleryLand';
 import GalleryMain from './Components/Pages/Main/GalleryMain/GalleryMain';
 import GalleryAdmin from './Components/Pages/Admin/Gallery/GalleryAdmin';
+import { fetchStock } from './Base/redux/Stock/stockAction';
 
 function App() {
   const dispatch=useDispatch()
 
+
   useEffect(()=>{
-   dispatch(fetchProducts()) 
-  dispatch(fetchCart(localStorage.getItem("email")))
+    if(localStorage.getItem("email-admin")){
+      dispatch(fetchStock())
+    }
+    else if(localStorage.getItem("email")){
+      dispatch(fetchProducts()) 
+      dispatch(fetchCart(localStorage.getItem("email")))
+      console.log(localStorage.getItem("email"))
+    }
+  
   },[])
 
   const { openCom, setOpenCom, openLand, setOpenLand } =
