@@ -140,7 +140,7 @@ export const fetchCart=(email)=>{
             const data=await response.json()
             console.log(data)
             dispatch(fetchCartSuccess(data))
-            localStorage.setItem("cartItems",data.cart)
+          
         } 
         catch (error) {
             console.log(error)
