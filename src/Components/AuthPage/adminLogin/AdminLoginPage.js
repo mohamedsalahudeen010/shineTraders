@@ -94,7 +94,7 @@ const AdminLogInPage = ({}) => {
             
             <div><span>AdminId : admin123@gmail.com</span> || 
             
-            <span>password : admin123</span></div>
+            <span>password : admin12345</span></div>
           <div className="input-div">
                 <label className="textlabel-signIn" for="email"
                 >Email <span style={{color:"brown"}}>*</span></label>
