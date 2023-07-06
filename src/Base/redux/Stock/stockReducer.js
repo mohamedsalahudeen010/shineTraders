@@ -31,23 +31,23 @@ const stockReducer=(state=initialState,action)=>{
               if (!alreadyExists) {
                 return {
                   ...state,
-                  cart: state.stock.map((item) =>
+                  stock: state.stock.map((item) =>
                     item._id == action.payload._id ? action.payload : item
                   ),
                 };
               } 
               else {
-                console.log(state.cart)
+                console.log(state.stock)
                 return {
                   ...state,
-                  cart: [...state.cart, action.payload],
+                  stock: [...state.stock, action.payload],
                 };
               }
         
         case "DELETE_ONE_FROM_STOCK":
             return {
               ...state,
-              cart: state.stock.filter(
+              stock: state.stock.filter(
                 (item) => item._id !== action.payload._id
               ),
             }
