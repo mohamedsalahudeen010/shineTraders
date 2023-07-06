@@ -8,11 +8,13 @@ import userReducer from "./users/usersReducer"
 import thunk from "redux-thunk"
 import productReducer from "./Products/productsReducer"
 import cartReducer from "./Cart/cartReducer"
+import stockReducer from "./Stock/stockReducer"
 
 const reducer=combineReducers({
 user:userReducer,
 products:productReducer,
-cartItems:cartReducer})
+cartItems:cartReducer,
+stock:stockReducer})
 
  const store = createStore(reducer,
    composeWithDevTools(applyMiddleware(logger,thunk)) )
