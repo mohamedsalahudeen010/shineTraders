@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0%;
+}
+.nav-wrapper-main{
+    height:10vh;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(25, 51, 9);
+    position:fixed;
+    top: 8vh;
+    left: 0;
+    width: 96vw;
+    z-index:2;
+    background-color: rgba(252, 252, 252, 0.934);
+    margin-left:1vw;
+    border-radius: 0.5rem;
+    border: 0.5px solid grey;
+    
+}
+
+.nav-left-main{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.nav-name-main{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    cursor: pointer;
+    color: rgb(80, 181, 22);
+}
+.user-name-main{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    cursor: pointer;
+    color: rgb(80, 181, 22);
+}
+
+.nav-right-main{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 1rem;
+    font-weight: 400;   
+    cursor: pointer;
+   
+}
+
+.nav-right-main-list{
+    
+    width: 100%;
+   align-content:flex-end ;
+}
+.nav-right-main-list>ul{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    font-weight: bold;
+    font-size:1.1rem;
+   margin-top: 1rem;
+   float: right;
+   
+}
+.nav-right-main-list>ul>li:hover{
+cursor: pointer;
+color: rgb(185, 96, 41);
+font-size:1.2rem;
+}
+.nav-name-main:hover{
+    font-size: 1.7rem;
+    color: rgb(80, 181, 22);
+}
+.nav-btn{
+    flex: 1;
+    margin-right: 2rem;
+}
+
+
+
+
+
+
+.land-dropDown{
+    display: none;
+}
+.products{
+    font-size: 0.8rem;
+    width: 98vw;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    border: 0.2px solid black;
+    border-radius:0 0 1rem 1rem;
+    transition: all 0.5s;
+    box-shadow: 1rem 1rem 1rem rgb(49, 49, 49);
+}
+.products>div{
+    text-align: left;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+   
+}
+.check-label-main{
+    display: none;
+}
+.land-dot-list-main{
+    position: absolute;
+    margin-top: 5rem;
+    right: 2%;
+    display: none;
+    text-align: left;
+}
+.view-nav-list-main{
+    background-color: rgba(0, 0, 0, 0.292);
+    color: whitesmoke;
+    border-radius: 1rem;
+    text-align: left;
+    padding: 0.5rem;
+}
+.view-nav-list-main>ul>li{
+
+    color: white;
+    padding: 0.2rem;
+}
+.view-nav-list-main>ul>li>span{
+    cursor: pointer;
+    color: rgb(241, 234, 234);
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+.view-nav-list-main>ul>li>span:hover{
+   
+    color: rgb(98, 223, 81);
+    font-size: 1.05rem;
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .nav-name-main{
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding-left: 0.5rem;
+        cursor: pointer;
+    }
+    .user-name-main{
+        font-size: 1rem;
+    }
+    .nav-left-main{
+        gap: 0.1rem;
+  
+    }
+    .nav-right-main-list>ul{
+     
+        gap: 1rem;
+     
+        font-size:1rem;
+       margin-top: 1rem;
+      
+       
+    }
+ 
+  }
+
+@media only screen and (max-width: 960px) {
+    
+    .nav-name-main{
+        font-size: 1.2rem;
+        padding-left: 0.4rem;
+      
+    }
+    .user-name-main{
+        font-size: 0.8rem;
+    }
+    .nav-left-main{
+        gap: 0.1rem;
+  
+    }
+    .nav-right-main-list>ul{
+     
+        gap: 0.9rem;
+        font-size:0.9rem;
+      
+       
+    }
+    
+  }
+  @media only screen and (max-width: 700px) {
+    .nav-name-main{
+        font-size: 1rem;
+        padding-left: 0.1rem;
+  
+    }
+    .user-name-main{
+        font-size: 0.7rem;
+    }
+    .nav-left-main{
+        gap: 0.1rem;
+  
+    }
+    .nav-right-main-list>ul{
+     
+        gap: 0.5rem;
+        font-size:0.75rem;
+      
+       
+    }
+  }
+  
+  
+
+  
+@media only screen and (max-width: 600px) {
+ 
+    .nav-right-main{
+        display: none;
+    }
+    .nav-name{
+        font-size: 1rem;
+        font-weight: bold;
+        padding-left: 1rem;
+        cursor: pointer;
+    }
+    .check-label-main{
+        display: block;
+        margin-top: 1rem;
+        margin-left: -5rem;
+    }
+    .land-dot-list-main{
+    
+        display: block;
+        position: absolute;
+        margin-top: 5rem;
+    }
+   
+  }
+  
+
+  @media only screen and (max-width: 500px) {
+
+   
+
+  }
