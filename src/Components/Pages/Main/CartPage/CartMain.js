@@ -38,12 +38,46 @@ function CartPage() {
   const removItemsFromCart=(idx)=>{
 
   }
-  const cartCard = useSelector((state) => state.cartItems.cart);
 
-  const dispatch = useDispatch();
+
+  const cartCard = useSelector((state) => state.cartItems.cart);
   const cartItems = cartCard;
+  const dispatch = useDispatch();
+  
 console.log("cartItems",cartItems)
   let totalAmount = cartItems.reduce((x, item) => x + item.totalPrice, 0);
+
+
+  const placeOrder=()=>{
+    if(totalAmount === 0){
+      alert("please Add Items in Cart");
+      }else{
+        var options = {
+          key: "rzp_test_lqugQj8QExL09b",
+          key_secret:"mnTghes5bIlkG5Y6moQcNsoK",
+          amount: totalAmount *100,
+          currency:"INR",
+          name:"SHINE_TRADERS",
+          description:"Shine Traders Application Payment",
+          handler: function(response){
+            alert(response.razorpay_payment_id);
+          },
+          prefill: {
+            name:"",
+            email:"shinetraders.sr@gmail.com",
+            contact:"8056323664"
+          },
+          notes:{
+            address:"Razorpay Corporate office"
+          },
+          theme: {
+            color:"#3399cc"
+          }
+        };
+        var pay = new window.Razorpay(options);
+        pay.open();
+      }
+  }
   return (
     <MainBase>
       <div className="row justify-content-center cart-page">
@@ -55,7 +89,7 @@ console.log("cartItems",cartItems)
               <div className="m-1 w-100" style={{ textAlign: "left" }}>
                 <h4>{item.productName}</h4>
                 <h5>
-                  Price:{item.pricePerProduct} * {item.quantity} ={" "}
+                  Price:{item.productPricePerItem} * {item.productQuantity} ={" "}
                   {item.totalPrice}RS/-
                 </h5>
 
@@ -116,7 +150,7 @@ console.log("cartItems",cartItems)
           <h2 className="mt-5">Total Amount : {totalAmount} Rs/-</h2>
           {/* <PaymentPage totalAmount={totalAmount}/> */}
           <button className="btn-pay" style={{margin:"1rem"}} onClick={()=>{dispatch(deleteWholeCart())}}>Clear Cart</button>
-          <button className="btn-place-order" style={{margin:"1rem"}} onClick={()=>{dispatch()}}>Place Order</button>
+          <button className="btn-place-order" style={{margin:"1rem"}} onClick={()=>{placeOrder()}}>Place Order</button>
              </div>
       </div>
       </MainBase>
