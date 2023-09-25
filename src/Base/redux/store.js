@@ -9,7 +9,7 @@ import thunk from "redux-thunk"
 import productReducer from "./Products/productsReducer"
 import cartReducer from "./Cart/cartReducer"
 import stockReducer from "./Stock/stockReducer"
-import orderReducer from "./orders/ordersReducer"
+import orderReducer from "./Orders/ordersReducer"
 
 const reducer=combineReducers({
 user:userReducer,
