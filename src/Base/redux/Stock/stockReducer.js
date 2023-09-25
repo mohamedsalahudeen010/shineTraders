@@ -2,7 +2,7 @@
 
 const initialState={
     loading:true,
-    cart:[],
+    stock:[],
     error:""
 }
 
