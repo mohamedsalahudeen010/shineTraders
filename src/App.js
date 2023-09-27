@@ -44,7 +44,7 @@ function App() {
     }
     else if(localStorage.getItem("email")){
       dispatch(fetchProducts()) 
-      dispatch(fetchOrders())
+      dispatch(fetchOrders(localStorage.getItem("email")))
       dispatch(fetchCart(localStorage.getItem("email")))
       console.log(localStorage.getItem("email"))
     }
