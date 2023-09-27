@@ -56,13 +56,9 @@ export const deleteAllOrders=()=>{
 export const fetchAddOrder=(product,varient,quantity)=>{
     const order={
         userMail:localStorage.getItem("email"),
-         productName:product.name,
-         productImage:product.image,
-         productVarient:varient,
-         productQuantity:quantity,
-         productPricePerItem:varient*product.prize,
-        totalPrice:varient*product.prize*quantity
-       
+        customerName:localStorage.getItem("name"),
+         products:product,
+        
     }
     return async (dispatch)=>{
         dispatch(addToOrder(order))
