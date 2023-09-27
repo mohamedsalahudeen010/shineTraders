@@ -32,7 +32,7 @@ import GalleryLand from './Components/Pages/Landing/Gallery/GalleryLand';
 import GalleryMain from './Components/Pages/Main/GalleryMain/GalleryMain';
 import GalleryAdmin from './Components/Pages/Admin/Gallery/GalleryAdmin';
 import { fetchStock } from './Base/redux/Stock/stockAction';
-import { fetchAddOrder, fetchOrders } from './Base/redux/Orders/ordersAction';
+import { fetchAddOrder, fetchOrders } from './Base/redux/orders/ordersAction';
 
 function App() {
   const dispatch=useDispatch()
