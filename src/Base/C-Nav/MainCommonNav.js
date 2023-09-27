@@ -35,9 +35,17 @@ function MainCommonNav() {
         <div className='common-nav-list'>
             <ul>
                 <li 
-                onClick={()=>{history.push("/contactMain")}}>Get in Touch</li>
-                <li>About Us</li>
-                <li onClick={()=>{history.push("/locateMain")}}>Locate Us</li>
+                onClick={()=>{history.push("/contactMain")}}>Get in Touch
+                </li>
+                <li
+                 onClick={()=>{history.push("/galleryMain")}}>Gallery
+                 </li>
+                <li
+                 onClick={()=>{history.push("/aboutMain")}}>About Us
+                 </li>
+                <li 
+                onClick={()=>{history.push("/locateMain")}}>Locate Us
+                </li>
             </ul>
             </div>
 
@@ -65,13 +73,22 @@ function MainCommonNav() {
                   <span className="com-list" style={{width:"100%"}}
                   onClick={()=>{history.push("/contactMain")}}>Get in Touch</span></li>
 
-                <li><span className="com-list" style={{width:"100%"}}>About Us</span></li>
                 <li
-                onClick={()=>{history.push("locateMain")}}><span className="com-list">Locate Us</span></li>
+                 onClick={()=>{history.push("/galleryMain")}}>
+                  <span className="com-list" style={{width:"100%"}}>Gallery</span>
+                 </li>
+
+                <li
+                onClick={()=>{history.push("/aboutMain")}}>
+                  <span className="com-list" style={{width:"100%"}}>About Us</span></li>
+                <li
+                onClick={()=>{history.push("locateMain")}}>
+                  <span className="com-list">Locate Us</span></li>
               </ul>
             </Card>
           </div>
         </Collapse>
+
       </div>
         </div>
     </div>
