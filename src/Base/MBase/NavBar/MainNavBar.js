@@ -20,7 +20,8 @@ function MainNavBar() {
 
    const cart=useSelector((prod)=>prod.cartItems.cart);
  
-   
+   const orders=useSelector((orders)=>orders.order.order[0].products);
+   console.log(orders)
 
    function logOutFunction(){
     localStorage.removeItem("name");
@@ -59,11 +60,11 @@ function MainNavBar() {
 
                      <li 
                      onClick={()=>history.push("/productsMain")}>
-                        Products
+                        Products 
                         </li>
                         
-                        <li onClick={()=>{history.push("/galleryMain")}}>
-                           Gallery
+                        <li onClick={()=>{history.push("/orders")}}>
+                           Orders 
                         </li>
   
                       <li onClick={()=>logOutFunction()}>
@@ -99,7 +100,7 @@ function MainNavBar() {
               history.push("/productsMain")}}>Products</span></li>
 
             <li><span onClick={()=>{setOpenLand(false);
-              history.push("/galleryMain")}}>Gallery</span></li>
+              history.push("/orders")}}>Orders</span></li>
             <li><span onClick={()=>{setOpenLand(false);
             logOutFunction()}}
             >Log Out</span></li>
