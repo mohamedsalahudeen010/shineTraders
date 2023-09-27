@@ -8,7 +8,7 @@ import Trash from "@iconscout/react-unicons/icons/uil-trash-alt"
 import { useHistory } from "react-router-dom";
 import MainBase from "../../../../Base/MBase/MainBase";
 import {  addOneToCart, addToCart, deleteOneItemCart, deleteWholeCart } from "../../../../Base/redux/Cart/cartAction";
-import { fetchAddOrder } from "../../../../Base/redux/Orders/ordersAction.js";
+import { fetchAddOrder } from "../../../../Base/redux/orders/ordersAction";
 function CartPage() {
 
   const history=useHistory()
