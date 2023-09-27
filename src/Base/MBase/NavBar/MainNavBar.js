@@ -20,7 +20,7 @@ function MainNavBar() {
 
    const cart=useSelector((prod)=>prod.cartItems.cart);
  
-const orders=useSelector((orders)=>orders.order.order[0].products);
+   const orders=useSelector((orders)=>orders.order.order[0].products);
    console.log(orders)
 
    function logOutFunction(){
