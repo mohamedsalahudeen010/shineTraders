@@ -32,7 +32,7 @@ const orderReducer=(state=initialState,action)=>{
                 return {
                   ...state,
                   order: state.order.map((item) =>
-                    item._id == action.payload._id ? action.payload : item
+                    item._id === action.payload._id ? action.payload : item
                   ),
                 };
               } 
@@ -40,7 +40,7 @@ const orderReducer=(state=initialState,action)=>{
                 console.log(state.order)
                 return {
                   ...state,
-                  cart: [...state.order, action.payload],
+                  order: [...state.order, action.payload],
                 };
               }
         
