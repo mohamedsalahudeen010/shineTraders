@@ -35,7 +35,10 @@ function LandCommonNav() {
             <ul>
                 <li 
                 onClick={()=>{history.push("/contactLand")}}>Get in Touch</li>
-                <li>About Us</li>
+                 <li 
+                onClick={()=>{history.push("/galleryLand")}}>Gallery</li>
+                <li
+                onClick={()=>{history.push("/aboutLand")}}>About Us</li>
                 <li onClick={()=>{history.push("/locateLand")}}>Locate Us</li>
             </ul>
             </div>
@@ -64,7 +67,13 @@ function LandCommonNav() {
                   <span className="com-list" style={{width:"100%",color:"black"}}
                   onClick={()=>{history.push("/contactLand")}}>Get in Touch</span></li>
 
-                <li><span className="com-list" style={{width:"100%",color:"black"}}>About Us</span></li>
+                  
+                <li><span className="com-list" 
+                onClick={()=>{history.push("/galleryLand")}}
+                style={{width:"100%",color:"black"}}>Gallery</span></li>
+
+                <li onClick={()=>{history.push("/aboutLand")}}><span className="com-list" 
+                style={{width:"100%",color:"black"}}>About Us</span></li>
                 <li
                 onClick={()=>{history.push("/locateLand")}}><span className="com-list"
                 style={{color:"gold"}}>Locate Us</span></li>
