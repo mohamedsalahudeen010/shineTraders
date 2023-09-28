@@ -45,10 +45,7 @@ function LandingNavBar() {
               >
                 Products
               </li>
-              <li
-              onClick={() => history.push("/galleryLand")}>
-                Gallery
-              </li>
+             
               <li
                 onClick={() => {
                   history.push("/logIn");
@@ -102,20 +99,12 @@ function LandingNavBar() {
                   </span>
                 </li>
                 <li>
-                  <span onClick={() =>{setOpenLand(false); history.push("/productsLand")}}>
+                  <span onClick={() =>{setOpenLand(false); 
+                    history.push("/productsLand")}}>
                     Products
                   </span>
                 </li>
-                <li>
-                  <span
-                    onClick={() => {
-                      setOpenLand(false);
-                      history.push("/galleryLand");
-                    }}
-                  >
-                    Gallery
-                  </span>
-                </li>
+               
 
                 <li>
                   <span
