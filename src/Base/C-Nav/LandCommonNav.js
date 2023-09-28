@@ -62,20 +62,34 @@ function LandCommonNav() {
           <div id="example-collapse-text">
             <Card body style={{ minWidth: '200px', border:"none",backgroundColor:"grey",textAlign:"left"}}>
               <ul style={{width:"100%"}} >
-                <li style={{width:"100%"}}
+                <li
+                className="com-list" style={{width:"100%"}}
+                onClick={()=>{
+                  setOpenLand(false,setOpenCom(!openCom));
+                  history.push("/contactLand")}}
                 >
-                  <span className="com-list" style={{width:"100%",color:"black"}}
-                  onClick={()=>{history.push("/contactLand")}}>Get in Touch</span></li>
+            Get in Touch</li>
 
                   
-                <li><span className="com-list" 
-                onClick={()=>{history.push("/galleryLand")}}
-                style={{width:"100%",color:"black"}}>Gallery</span></li>
+                <li className="com-list" 
+                onClick={()=>{
+                  setOpenLand(false,setOpenCom(!openCom));
+                  history.push("/galleryLand")}}
+                style={{width:"100%"}}>Gallery</li>
 
-                <li onClick={()=>{history.push("/aboutLand")}}><span className="com-list" 
-                style={{width:"100%",color:"black"}}>About Us</span></li>
+                <li 
+                className="com-list"
+                style={{width:"100%"}} 
+                onClick={()=>{
+                  setOpenLand(false,setOpenCom(!openCom));
+                  history.push("/aboutLand")}}
+                  
+                >About Us</li>
                 <li
-                onClick={()=>{history.push("/locateLand")}}><span className="com-list"
+                onClick={()=>{
+                  setOpenLand(false,setOpenCom(!openCom));
+                  history.push("/locateLand")}}>
+                    <span className="com-list"
                 style={{color:"gold"}}>Locate Us</span></li>
               </ul>
             </Card>
