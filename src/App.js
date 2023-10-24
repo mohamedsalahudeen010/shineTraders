@@ -32,7 +32,9 @@ import GalleryLand from './Components/Pages/Landing/Gallery/GalleryLand';
 import GalleryMain from './Components/Pages/Main/GalleryMain/GalleryMain';
 import GalleryAdmin from './Components/Pages/Admin/Gallery/GalleryAdmin';
 import { fetchStock } from './Base/redux/Stock/stockAction';
-import { fetchOrders } from './Base/redux/Orders/ordersAction';
+import { fetchOrders } from './Base/redux/orders/ordersAction';
+import OrdersUser from './Components/Pages/Main/OrdersUserPage/OrdersUser';
+
 
 function App() {
   const dispatch=useDispatch()
@@ -114,7 +116,10 @@ function App() {
         <Route path="/locateMain">
           <LocateUsMain></LocateUsMain>
         </Route>
-        
+        <Route path="/orderUser">
+          <OrdersUser></OrdersUser>
+        </Route>
+
         <Route path="/cart">
           <CartPage></CartPage>
         </Route>
