@@ -19,7 +19,8 @@ function MainNavBar() {
    
 
    const cart=useSelector((prod)=>prod.cartItems.cart);
- 
+ const orders=useSelector((orders)=>orders.order.order[0]);
+   console.log(orders)
   
    function logOutFunction(){
     localStorage.removeItem("name");
