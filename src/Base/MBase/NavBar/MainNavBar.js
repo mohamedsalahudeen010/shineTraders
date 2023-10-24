@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./MainNavBar.css"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,6 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { ShineContext } from '../../../Context';
 import Avatar from "@iconscout/react-unicons/icons/uil-user-circle"
 import { useSelector } from 'react-redux';
+import { fetchOrders } from '../../redux/Orders/ordersAction';
 
 
 function MainNavBar() {
@@ -17,11 +18,14 @@ function MainNavBar() {
    const {openCom,setOpenCom,openLand,setOpenLand}=useContext(ShineContext)
    const [product,setProduct]=useState(false)
    
-
+useEffect(()=>{
+  fetchOrders(localStorage.getItem("email"))
+},[])
    const cart=useSelector((prod)=>prod.cartItems.cart);
- const orders=useSelector((orders)=>orders.order.order[0].products);
+ 
+   const orders=useSelector((orders)=>orders.order.order[0].products);
    console.log(orders)
-  
+
    function logOutFunction(){
     localStorage.removeItem("name");
     localStorage.removeItem("email");
