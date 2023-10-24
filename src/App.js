@@ -32,8 +32,10 @@ import GalleryLand from './Components/Pages/Landing/Gallery/GalleryLand';
 import GalleryMain from './Components/Pages/Main/GalleryMain/GalleryMain';
 import GalleryAdmin from './Components/Pages/Admin/Gallery/GalleryAdmin';
 import { fetchStock } from './Base/redux/Stock/stockAction';
-import { fetchOrders } from './Base/redux/Orders/ordersAction';
+import { fetchOrders } from './Base/redux/orders/ordersAction';
 import OrdersUser from './Components/Pages/Main/OrdersUserPage/OrdersUser';
+import AboutLand from './Components/Pages/Landing/AboutLand/AboutLand';
+import AboutMain from './Components/Pages/Main/AboutMain/AboutMain';
 
 
 function App() {
@@ -100,6 +102,10 @@ function App() {
         <Route path="/galleryLand">
           <GalleryLand></GalleryLand>
         </Route>
+
+        <Route path="/aboutLand">
+          <AboutLand></AboutLand>
+        </Route>
 {/* <<<<<<<<<<<<<<<<<<<<< Main Pages >>>>>>>>>>>>>>>>>>>>>>> */}
         <Route path="/main">
           <MainPage></MainPage>
@@ -126,6 +132,10 @@ function App() {
 
         <Route path="/galleryMain">
           <GalleryMain></GalleryMain>
+        </Route>
+
+        <Route path="/aboutMain">
+          <AboutMain></AboutMain>
         </Route>
 
 {/* <<<<<<<<<<<<<<<<<<<<< Admin Pages >>>>>>>>>>>>>>>>>>>>>>> */}
