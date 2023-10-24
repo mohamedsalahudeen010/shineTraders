@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 import { ShineContext } from '../../../Context';
 import Avatar from "@iconscout/react-unicons/icons/uil-user-circle"
 import { useSelector } from 'react-redux';
-import { fetchOrders } from '../../redux/orders/ordersAction';
+import { fetchOrders } from '../../redux/Orders/ordersAction';
 
 
 function MainNavBar() {
