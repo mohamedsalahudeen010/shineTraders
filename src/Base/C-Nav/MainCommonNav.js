@@ -6,13 +6,14 @@ import Twitter from '@iconscout/react-unicons/icons/uil-twitter'
 import Dot from "@iconscout/react-unicons/icons/uil-bars"
 import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
+
 import { useHistory } from "react-router-dom";
 import { ShineContext } from "../../Context";
 
 
 // import Dot from "@iconscout/react-unicons/icons/uil-ellipsis-h"
 
-function LandCommonNav() {
+function MainCommonNav() {
 //  const[openCom,setOpenCom]=useState(false)
   const {openCom,setOpenCom,openLand,setOpenLand}=useContext(ShineContext)
   const history=useHistory()
@@ -25,7 +26,7 @@ function LandCommonNav() {
                 <li><Insta size={"1.5rem"} color={"black"}/></li>
                 <li><Facebook size={"1.5rem"} color={"black"}/></li>
                 <li><Twitter size={"1.5rem"} color={"black"}/></li>
-                <li onClick={()=>{history.push("/adminLogin")}}>Admin</li>
+                
                 
             </ul>
             </div>
@@ -34,17 +35,22 @@ function LandCommonNav() {
         <div className='common-nav-list'>
             <ul>
                 <li 
-                onClick={()=>{history.push("/contactLand")}}>Get in Touch</li>
-                 <li 
-                onClick={()=>{history.push("/galleryLand")}}>Gallery</li>
+                onClick={()=>{history.push("/contactMain")}}>Get in Touch
+                </li>
                 <li
-                onClick={()=>{history.push("/aboutLand")}}>About Us</li>
-                <li onClick={()=>{history.push("/locateLand")}}>Locate Us</li>
+                 onClick={()=>{history.push("/galleryMain")}}>Gallery
+                 </li>
+                <li
+                 onClick={()=>{history.push("/aboutMain")}}>About Us
+                 </li>
+                <li 
+                onClick={()=>{history.push("/locateMain")}}>Locate Us
+                </li>
             </ul>
             </div>
 
 
-            <div className="lable-div">
+            <div>
               <input type="checkbox" id="check-common" name="" value="" style={{display:"none"}}></input>
               <label htmlFor="check" className="check-label-common"
               onClick={()=>setOpenLand(false,setOpenCom(!openCom))}
@@ -60,31 +66,33 @@ function LandCommonNav() {
             <div style={{ minHeight: '150px' }} className="common-list">
         <Collapse in={openCom} dimension="width" className="common-list-1">
           <div id="example-collapse-text">
-            <Card body style={{ minWidth: '200px', border:"none",backgroundColor:"grey",textAlign:"left"}}>
+            <Card body style={{ minWidth: '200px', border:"none",backgroundColor:"rgb(107, 107, 169)",textAlign:"left"}}>
               <ul style={{width:"100%"}} >
                 <li style={{width:"100%"}}
                 >
-                  <span className="com-list" style={{width:"100%",color:"black"}}
-                  onClick={()=>{history.push("/contactLand")}}>Get in Touch</span></li>
+                  <span className="com-list" style={{width:"100%"}}
+                  onClick={()=>{history.push("/contactMain")}}>Get in Touch</span></li>
 
-                  
-                <li><span className="com-list" 
-                onClick={()=>{history.push("/galleryLand")}}
-                style={{width:"100%",color:"black"}}>Gallery</span></li>
-
-                <li onClick={()=>{history.push("/aboutLand")}}><span className="com-list" 
-                style={{width:"100%",color:"black"}}>About Us</span></li>
                 <li
-                onClick={()=>{history.push("/locateLand")}}><span className="com-list"
-                style={{color:"gold"}}>Locate Us</span></li>
+                 onClick={()=>{history.push("/galleryMain")}}>
+                  <span className="com-list" style={{width:"100%"}}>Gallery</span>
+                 </li>
+
+                <li
+                onClick={()=>{history.push("/aboutMain")}}>
+                  <span className="com-list" style={{width:"100%"}}>About Us</span></li>
+                <li
+                onClick={()=>{history.push("locateMain")}}>
+                  <span className="com-list">Locate Us</span></li>
               </ul>
             </Card>
           </div>
         </Collapse>
+
       </div>
         </div>
     </div>
   )
 }
 
-export default LandCommonNav
+export default MainCommonNav
