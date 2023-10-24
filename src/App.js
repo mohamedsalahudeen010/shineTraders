@@ -116,7 +116,7 @@ function App() {
         <Route path="/locateMain">
           <LocateUsMain></LocateUsMain>
         </Route>
-        <Route path="/orderUser">
+        <Route path="/ordersUser">
           <OrdersUser></OrdersUser>
         </Route>
 
