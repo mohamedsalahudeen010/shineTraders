@@ -36,11 +36,11 @@ export const addToStock=(data)=>{
 }
 
 
-export const deleteOneStock=(cart)=>{
+export const deleteOneStock=(product)=>{
 
     return{
         type:"DELETE_ONE_FROM_STOCK",
-        payload:cart
+        payload:product
     }
 }
 
@@ -73,7 +73,7 @@ export const fetchAddToStock=(product,varient,quantity)=>{
                 body:JSON.stringify(products),
                 headers:{
                     "Content-Type":"application/json",
-                    "x-auth-token":localStorage.getItem("token")
+                    "x-auth-token":localStorage.getItem("token-admin")
                  }
             })
             const data=await response.json()
@@ -110,7 +110,7 @@ export const addOneToStock=(product,varient,quantity)=>{
                 body:JSON.stringify(cartItems),
                 headers:{
                     "Content-Type":"application/json",
-                    "x-auth-token":localStorage.getItem("token")
+                    "x-auth-token":localStorage.getItem("token-admin")
                  }
             })
             const data=await response.json()
@@ -134,7 +134,7 @@ export const fetchStock=()=>{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json",
-                    "x-auth-token":localStorage.getItem("token")
+                    "x-auth-token":localStorage.getItem("token-admin")
                  }
             })
             const data=await response.json()
@@ -161,7 +161,7 @@ export const deleteOneItemStock=(product)=>{
                 method:"DELETE",
                 headers:{
                     "Content-Type":"application/json",
-                    "x-auth-token":localStorage.getItem("token")
+                    "x-auth-token":localStorage.getItem("token-admin")
                  }
             })
             const data=await response.json()
@@ -177,7 +177,7 @@ export const deleteOneItemStock=(product)=>{
 
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Delete Items In Cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
-export const deleteWholeCart=()=>{
+export const deleteWholeStock=()=>{
     
     
     return async (dispatch)=>{
@@ -187,7 +187,7 @@ export const deleteWholeCart=()=>{
                 method:"DELETE",
                 headers:{
                     "Content-Type":"application/json",
-                    "x-auth-token":localStorage.getItem("token")
+                    "x-auth-token":localStorage.getItem("token-admin")
                  }
             })
             const data=await response.json()
