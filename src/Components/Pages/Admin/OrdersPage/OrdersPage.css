@@ -1,0 +1,58 @@
+*{
+    color: black;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+  }
+  .admin-orders-page{
+    min-height: 100vh;
+    width: 100vw;
+    padding-top: 5rem;
+  }
+  .cart-image> img {
+      border-radius: 1rem;
+      margin-left: 5rem;
+      width: 50%;
+      margin-top: -1.5rem;
+      height: 90%;
+      box-shadow: 0.2rem 0.2rem 0.2rem black;
+    }
+    .my-cart{
+      font-size: 3rem; 
+      margin: 2rem ;
+      color: rgb(11, 19, 101);
+    }
+    .cart{
+  margin: 2rem;
+    }
+  
+    .btn-pay{
+      font-size: 1rem;
+      padding: 0.2rem 0.5rem;
+      border: 0.2rem solid black;
+      border-radius: 0.5rem;
+      background-color: rgba(241, 51, 8, 0.918);
+      font-weight: bold;
+      color: whitesmoke;
+    }
+    .btn-pay:hover{
+      font-size: 1.1rem;
+      border: 0.2rem solid rgb(207, 15, 15);
+      background-color: whitesmoke;
+      color: rgba(241, 51, 8, 0.918);
+    }
+  
+    .btn-place-order{
+      font-size: 1rem;
+      padding: 0.2rem 0.5rem;
+      border: 0.2rem solid black;
+      border-radius: 0.5rem;
+      background-color: rgba(20, 241, 8, 0.918);
+      font-weight: bold;
+    }
+    .btn-place-order:hover{
+      font-size: 1.1rem;
+      border: 0.2rem solid rgb(16, 172, 44);
+      background-color: whitesmoke;
+      color:  rgba(20, 241, 8, 0.918);
+    }
