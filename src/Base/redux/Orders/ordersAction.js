@@ -157,7 +157,7 @@ export const fetchAllOrders=(email)=>{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json",
-                    "x-auth-token":localStorage.getItem("token")
+                    "x-auth-token":localStorage.getItem("token-admin")
                  }
             })
             const data=await response.json()
