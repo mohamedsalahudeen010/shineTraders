@@ -153,7 +153,7 @@ export const fetchAllOrders=()=>{
         dispatch(fetchOrderRequest())
         
         try {
-            const response=await fetch(`https://shine-traders-back-end.vercel.app/order`,{
+            const response=await fetch(`https://shine-traders-back-end.vercel.app/order/admin`,{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json",
@@ -179,7 +179,7 @@ export const deleteOneItemOrder=(product)=>{
     return async (dispatch)=>{
         try {
             dispatch(deleteOneOrder(product))
-            const response=await fetch(`https://shine-traders-back-end.vercel.app/order/${id}`,{
+            const response=await fetch(`https://shine-traders-back-end.vercel.app/order/admin/${id}`,{
                 method:"DELETE",
                 headers:{
                     "Content-Type":"application/json",
