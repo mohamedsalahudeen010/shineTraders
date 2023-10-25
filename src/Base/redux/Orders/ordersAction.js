@@ -148,7 +148,7 @@ export const fetchOrders=(email)=>{
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fetch Orders User>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 
-export const fetchAllOrders=(email)=>{
+export const fetchAllOrders=()=>{
     return async (dispatch)=>{
         dispatch(fetchOrderRequest())
         
@@ -183,7 +183,7 @@ export const deleteOneItemOrder=(product)=>{
                 method:"DELETE",
                 headers:{
                     "Content-Type":"application/json",
-                    "x-auth-token":localStorage.getItem("token")
+                    "x-auth-token":localStorage.getItem("token-admin")
                  }
             })
             const data=await response.json()
