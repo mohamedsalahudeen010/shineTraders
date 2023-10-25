@@ -83,7 +83,7 @@ export const fetchAddOrder=(product,varient,quantity)=>{
 }
 
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Update Items To Cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Update Items To Orders >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 
 export const addOneToOrder=(product,varient,quantity)=>{
     const orders={
@@ -119,7 +119,7 @@ export const addOneToOrder=(product,varient,quantity)=>{
     }
 }
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fetch Cart Items >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fetch Orders User>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 
 export const fetchOrders=(email)=>{
     return async (dispatch)=>{
@@ -146,7 +146,33 @@ export const fetchOrders=(email)=>{
 }
 
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Delete Items In Cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Fetch Orders User>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+
+export const fetchAllOrders=(email)=>{
+    return async (dispatch)=>{
+        dispatch(fetchOrderRequest())
+        
+        try {
+            const response=await fetch(`https://shine-traders-back-end.vercel.app/order`,{
+                method:"GET",
+                headers:{
+                    "Content-Type":"application/json",
+                    "x-auth-token":localStorage.getItem("token")
+                 }
+            })
+            const data=await response.json()
+            console.log(data)
+            dispatch(fetchOrderSuccess(data))
+          
+        } 
+        catch (error) {
+            console.log(error)
+            dispatch(fetchOrderFailure(error))
+        }
+    }
+}
+
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Delete Items In Orders >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 export const deleteOneItemOrder=(product)=>{
     
     const id=product._id
@@ -172,7 +198,7 @@ export const deleteOneItemOrder=(product)=>{
 
 
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Delete Items In Cart >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
+//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Delete Items In Orders >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 export const deleteWholeOrders=()=>{
     
     
