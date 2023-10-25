@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AdminBase from '../../../../Base/ABase/AdminBase'
 import "./OrdersPage.css"
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteOneItemOrder, fetchAllOrders } from '../../../../Base/redux/orders/ordersAction'
+import { deleteOneItemOrder, fetchAllOrders } from '../../../../Base/redux/Orders/ordersAction'
 import Plus from "@iconscout/react-unicons/icons/uil-plus-circle"
 import Minus from "@iconscout/react-unicons/icons/uil-minus-circle"
 import Trash from "@iconscout/react-unicons/icons/uil-trash-alt"
