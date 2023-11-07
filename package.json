@@ -4,8 +4,13 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fontsource/roboto": "^5.0.8",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@iconscout/react-unicons": "^2.0.2",
+    "@mui/material": "^5.14.15",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -23,6 +28,7 @@
     "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.2",
+    "styled-components": "^6.1.0",
     "web-vitals": "^2.1.4",
     "yup": "^1.2.0"
   },
