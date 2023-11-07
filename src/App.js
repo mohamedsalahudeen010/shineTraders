@@ -37,6 +37,7 @@ import OrdersUser from './Components/Pages/Main/OrdersUserPage/OrdersUser';
 import AboutLand from './Components/Pages/Landing/AboutLand/AboutLand';
 import AboutMain from './Components/Pages/Main/AboutMain/AboutMain';
 import AddProducts from './Components/Pages/Admin/StockPage/AddProducts/AddProducts';
+import UpdateProducts from './Components/Pages/Admin/StockPage/UpdateProducts/UpdateProducts';
 
 
 function App() {
@@ -172,6 +173,10 @@ function App() {
 
         <Route path="/addProducts">
           <AddProducts></AddProducts>
+        </Route>
+
+        <Route path="/updateProducts/:id">
+          <UpdateProducts></UpdateProducts>
         </Route>
       </Switch>
     </div>
