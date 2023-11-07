@@ -32,10 +32,11 @@ import GalleryLand from './Components/Pages/Landing/Gallery/GalleryLand';
 import GalleryMain from './Components/Pages/Main/GalleryMain/GalleryMain';
 import GalleryAdmin from './Components/Pages/Admin/Gallery/GalleryAdmin';
 import { fetchStock } from './Base/redux/Stock/stockAction';
-import { fetchOrders } from './Base/redux/Orders/ordersAction';
+import { fetchAllOrders, fetchOrders } from './Base/redux/orders/ordersAction';
 import OrdersUser from './Components/Pages/Main/OrdersUserPage/OrdersUser';
 import AboutLand from './Components/Pages/Landing/AboutLand/AboutLand';
 import AboutMain from './Components/Pages/Main/AboutMain/AboutMain';
+import AddProducts from './Components/Pages/Admin/StockPage/AddProducts/AddProducts';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
   useEffect(()=>{
     if(localStorage.getItem("email-admin")){
       dispatch(fetchStock())
+      dispatch(fetchAllOrders())
     }
     else if(localStorage.getItem("email")){
       dispatch(fetchProducts()) 
@@ -167,6 +169,10 @@ function App() {
           <GalleryAdmin></GalleryAdmin>
         </Route>
 
+
+        <Route path="/addProducts">
+          <AddProducts></AddProducts>
+        </Route>
       </Switch>
     </div>
   );
