@@ -1,3 +1,7 @@
+import React from "react"
+
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+
 
 export const fetchStockRequest=()=>{
     return{
@@ -30,7 +34,7 @@ export const addItemToStock=(data)=>{
 export const addToStock=(data)=>{
    
     return{
-        type:"ADD_TO_CART",
+        type:"ADD_TO_STOCK",
         payload:data
     }
 }
@@ -53,24 +57,25 @@ export const deleteAllStock=()=>{
 
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Add Products >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
-export const fetchAddToStock=(product,varient,quantity)=>{
-    const products={
+export const fetchAddToStock=(product)=>{
+    // const products={
         
-         productName:product.name,
-         productImage:product.image,
-         productVarient:varient,
-         productQuantity:quantity,
-         productPricePerItem:varient*product.prize,
-        totalPrice:varient*product.prize*quantity
+    //      productName:product.name,
+    //      productImage:product.image,
+    //      productVarient:varient,
+    //      productQuantity:quantity,
+    //      productPricePerItem:varient*product.prize,
+    //     totalPrice:varient*product.prize*quantity
        
-    }
+    // }
+    
     return async (dispatch)=>{
-        dispatch(addToStock(products))
+        dispatch(addToStock(product))
         
         try {
             const response=await fetch(`https://shine-traders-back-end.vercel.app/products/admin`,{
                 method:"POST",
-                body:JSON.stringify(products),
+                body:JSON.stringify(product),
                 headers:{
                     "Content-Type":"application/json",
                     "x-auth-token":localStorage.getItem("token-admin")
@@ -89,25 +94,17 @@ export const fetchAddToStock=(product,varient,quantity)=>{
 
 //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Update Products >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>//
 
-export const addOneToStock=(product,varient,quantity)=>{
-    const cartItems={
-        userMail:localStorage.getItem("email"),
-         productName:product.name,
-         productImage:product.image,
-         productVarient:varient,
-         productQuantity:quantity+1,
-         productPricePerItem:varient*product.prize,
-        totalPrice:varient*product.prize*quantity
-       
-    }
+export const updateStock=(product)=>{
+   
     const id=product._id
+    console.log(id)
     return async (dispatch)=>{
-        dispatch(addToStock(cartItems))
+        dispatch(addToStock(product))
         
         try {
             const response=await fetch(`https://shine-traders-back-end.vercel.app/products/admin/${id}`,{
                 method:"PUT",
-                body:JSON.stringify(cartItems),
+                body:JSON.stringify(product),
                 headers:{
                     "Content-Type":"application/json",
                     "x-auth-token":localStorage.getItem("token-admin")
