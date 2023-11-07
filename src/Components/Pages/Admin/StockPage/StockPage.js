@@ -6,10 +6,12 @@ import { fetchProducts } from '../../../../Base/redux/Products/productssAction'
 import StockCardAdmin from './Card/StockCardAdmin'
 import { fetchStock } from '../../../../Base/redux/Stock/stockAction'
 import { fetchCart } from '../../../../Base/redux/Cart/cartAction'
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min'
 
 function StockPage() {
 
   const dispatch=useDispatch()
+  const history=useHistory()
   
   useEffect(()=>{
     if(localStorage.getItem("email-admin")){
@@ -29,7 +31,7 @@ function StockPage() {
 
 <div></div>
     <div>
-      <button className='add-product-btn'>Add Product</button>
+      <button className='add-product-btn' onClick={()=>{history.push("/addProducts")}}>Add Product</button>
     </div>
 
 <div className="row justify-content-center products-admin"
