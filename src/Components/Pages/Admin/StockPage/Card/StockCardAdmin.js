@@ -72,25 +72,15 @@ const StockCardAdmin = ({ product }) => {
             <div className="w-100">
               <button
                 className="m-1 stock_btn-update"
-                // onClick={() => {
-                //   history.push(`/addtocart`);
-                // }}
+                onClick={() => {
+                  history.push(`/updateProducts/${product._id}`);
+                }}
               >
                 Update
               </button>
             </div>
          </div>  
 
- {/* <div className="w-100">
-              <button
-                className="m-1 card_btn"
-                onClick={() => {
-                  history.push(`/addtocart`);
-                }}
-              >
-                Buy Now
-              </button>
-            </div> */}
         </Card.Body>
       </Card>
 
@@ -108,7 +98,7 @@ const StockCardAdmin = ({ product }) => {
                   className="image-fluid img-model"
                   style={{ height: "20rem", width: "20rem" }}
                   src={product.image}
-                  alt="pizza"
+                  alt="products"
                 ></img>
               </div>
             </div>
