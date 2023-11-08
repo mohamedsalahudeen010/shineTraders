@@ -9,14 +9,16 @@ import thunk from "redux-thunk"
 import productReducer from "./Products/productsReducer"
 import cartReducer from "./Cart/cartReducer"
 import stockReducer from "./Stock/stockReducer"
-import orderReducer from "./Orders/ordersReducer"
+import orderReducer from "./orders/ordersReducer"
+import galleryReducer from "./Gallery/galleryReducer"
 
 const reducer=combineReducers({
 user:userReducer,
 products:productReducer,
 cartItems:cartReducer,
 stock:stockReducer,
-order:orderReducer
+order:orderReducer,
+gallery:galleryReducer
 })
 
  const store = createStore(reducer,
